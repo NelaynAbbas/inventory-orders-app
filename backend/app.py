@@ -147,6 +147,30 @@ init_sample_data()
 def read_root():
     return {"message": "Welcome to StreamLine API"}
 
+@app.post("/items-management")
+def manage_items(item: Item):
+    if item.id:
+        for i, existing_items in enumerate(items_db):
+            if existing_items["id"] == item.id:
+                item_dict = item.dict()
+                items_db[i] = item_dict
+                return item_dict
+        raise HTTPException(status_code=404, detail="Item not found")
+    else:
+        item.id = str(uuid.uuid4())
+        item_dict = item.dict()
+        items_db.append(item_dict)
+        return item_dict
+    
+@app.delete("/items-management")
+def delete_items(item_id: dict):
+    for i,item in enumerate(items_db):
+        if item["id"] == item_id["id"]:
+            delete_items = items_db.pop(i)
+            return {"message":"Items deteleted", "item":delete_items}
+    raise HTTPException(status_code=404, detail="Item not found")
+
+
 @app.get("/items")
 def get_items():
     return items_db
