@@ -91,11 +91,12 @@ The frontend will be available at [http://localhost:3000](http://localhost:3000)
     │   │   ├── pages/           # Page components
     │   │   ├── App.jsx          # Main application component
     │   │   └── main.jsx         # Entry point
+    │   │   └── index.css        # styling
     │   ├── package.json         # Frontend dependencies
     │   └── vite.config.js       # Vite configuration
     │
     ├── backend/                 # FastAPI
-    │   ├── main.py              # API endpoints and business logic
+    │   ├── app.py               # API endpoints and business logic
     │   └── requirements.txt     # Backend dependencies
     │
     └── README.md                # Project documentation
