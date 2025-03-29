@@ -27,7 +27,6 @@ function App() {
             </Routes>
           </main>
           <Footer />
-          <Toaster position="bottom-right" />
         </div>
       </Router>
     </CartProvider>
