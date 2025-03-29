@@ -101,6 +101,32 @@ The frontend will be available at [http://localhost:3000](http://localhost:3000)
     │
     └── README.md                # Project documentation
 
+---
+## API Endpoints
+
+- `GET /items` - Browse available items  
+- `POST /orders` - Place an order  
+- `GET /offers` - View available offers  
+- `POST /items-management` - Add/Update items (staff)  
+- `DELETE /items-management` - Remove items (staff)  
+- `POST /offers-management` - Add/Update offers (staff)  
+- `DELETE /offers-management` - Remove offers (staff) 
+
+---
+## Implementation Details
+
+- **In-memory Storage**: The application uses in-memory storage for simplicity.  
+- **Responsive Design**: The frontend is fully responsive for all device sizes.  
+- **Error Handling**: Comprehensive error handling throughout the application.  
+- **Modular Code**: The codebase is organized in a modular, maintainable way.  
+
+---
+## Trade-offs and Limitations
+
+- **Authentication**: No authentication/authorization implemented as per requirements.  
+- **Persistence**: Using in-memory storage instead of a database as specified.  
+- **Testing**: Limited test coverage due to project scope.  
+
 
 ---
 ## Author
