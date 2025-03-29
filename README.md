@@ -53,7 +53,7 @@
 
 1. **Clone the Repository**:  
    ```bash
-   git clone https://github.com/yourusername/inventory-orders-app.git
+   git clone https://github.com/NelaynAbbas/inventory-orders-app.git
 
 2. **Install Frontend**:  
    ```bash
